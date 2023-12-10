@@ -4,6 +4,7 @@ public class a467_findSubstringInWraproundString {
     public int findSubstringInWraproundString(String s) {
         //zklfa
         int a=0;
+        //结果拉分
         int n = s.length();
         int[] arr = new int[n];
         for (int i = 0; i < n; i++) {
