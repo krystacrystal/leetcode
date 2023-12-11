@@ -49,9 +49,41 @@ public class nc190_generatePermutation {
         path.deleteCharAt(path.length() - 1);
     }
 
+    char[] path1;
+
+    public String[] generatePermutation1(String s) {
+        char[] str = s.toCharArray();
+        char[] path1 = new char[str.length];
+        HashSet<String> set = new HashSet<>();
+        this.path1 = path1;
+        this.set = set;
+        this.str = str;
+        generatePermutation1(0, 0);
+        String[] res = new String[set.size()];
+        int i = 0;
+        for (String s1 : set) {
+            res[i++] = s1;
+        }
+        return res;
+    }
+
+    //size表示当前path中已经填了多少个字符
+    public void generatePermutation1(int i, int size) {
+        if (i == str.length) {
+            set.add(String.valueOf(path1,0,size));
+            return;
+        }
+        //要
+        path1[size] = str[i];
+        generatePermutation1(i + 1, size + 1);
+        //不要
+        generatePermutation1(i + 1, size);
+    }
+
+
     @Test
     public void test() {
-        String[] strings = generatePermutation("abcde");
+        String[] strings = generatePermutation1("abcde");
         System.out.println(strings.length);
         for (String string : strings) {
             System.out.println(string);
