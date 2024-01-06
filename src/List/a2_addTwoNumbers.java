@@ -4,22 +4,6 @@ import com.sun.source.tree.LiteralTree;
 import org.junit.Test;
 
 public class a2_addTwoNumbers {
-    class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode() {
-        }
-
-        ListNode(int val) {
-            this.val = val;
-        }
-
-        ListNode(int val, ListNode next) {
-            this.val = val;
-            this.next = next;
-        }
-    }
 
     public ListNode addTwoNumbers1(ListNode l1, ListNode l2) {
         ListNode ans = null;

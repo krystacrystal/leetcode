@@ -3,22 +3,7 @@ package List;
 
 
 public class a21_mergeTwoLists {
-    class ListNode {
-        int val;
-        ListNode next;
 
-        ListNode() {
-        }
-
-        ListNode(int val) {
-            this.val = val;
-        }
-
-        ListNode(int val, ListNode next) {
-            this.val = val;
-            this.next = next;
-        }
-    }
     //list1和list2本来也是升序链表
     //用到了链表的双指针技巧
     public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
