@@ -38,7 +38,4 @@ public class MyTest {
         generatePermutation(i + 1, size);
     }
 
-
-
-
 }
